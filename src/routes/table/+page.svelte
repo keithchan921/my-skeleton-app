@@ -10,8 +10,9 @@
 		{name: "Candy", gender: "Female", age: 18},
 		{name: "Alex", gender: "Male", age: 20}
 	]);
+	
+	let tableSimple: TableSource = { head: [], body: [], meta: [], foot: []	};
 
-	let tableSimple = {};
 	let tableChecked: boolean = false;
 	let selectedRow: any;
 	
@@ -21,12 +22,13 @@
 		size: $sourceData.length,
 		amounts: [1,2,5,10],
 	};
-
+	
 	$: paginatedSource = $sourceData.slice(
 		page.offset * page.limit,
 		page.offset * page.limit + page.limit
 		);
 		
+
 	$: tableSimple = {
 		head: ['Name', 'Gender', 'Age'],
 		body: tableMapperValues(paginatedSource, ['name', 'gender', 'age']),

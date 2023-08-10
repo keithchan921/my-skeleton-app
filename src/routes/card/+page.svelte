@@ -1,6 +1,5 @@
 <script lang=ts>
-  import { } from "@skeletonlabs/skeleton";
-
+	import { base } from '$app/paths';
 </script>
 
 <div class="previewer-viewport p-4 md:p-10 space-y-4 bg-gradient-to-br variant-gradient-primary-secondary ">
@@ -9,7 +8,7 @@
 			<div class="card variant-ghost-primary p-4 flex justify-center items-center">
 				<span>Minimal</span>
 			</div>
-			<a class="card variant-ghost-primary card-hover overflow-hidden" href="/elements/cards">
+			<a class="card variant-ghost-primary card-hover overflow-hidden" href="{base}/">
 				<header>
 				<div class="h2 text-center py-2">Header</div>
 			</header>
